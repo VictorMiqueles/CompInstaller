@@ -1,0 +1,16 @@
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\bin\Debug\net7.0-windows\CompInstaller.exe
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\bin\Debug\net7.0-windows\CompInstaller.deps.json
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\bin\Debug\net7.0-windows\CompInstaller.runtimeconfig.json
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\bin\Debug\net7.0-windows\CompInstaller.dll
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\bin\Debug\net7.0-windows\CompInstaller.pdb
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\CompInstaller.CompInstaller.resources
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\CompInstaller.csproj.GenerateResource.cache
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\CompInstaller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\CompInstaller.AssemblyInfoInputs.cache
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\CompInstaller.AssemblyInfo.cs
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\CompInstaller.csproj.CoreCompileInputs.cache
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\CompInstaller.dll
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\refint\CompInstaller.dll
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\CompInstaller.pdb
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\CompInstaller.genruntimeconfig.cache
+C:\Users\Victor\Git\VIC0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\ref\CompInstaller.dll
