@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Victor\\Git\\VIC0001\\CompInstaller\\CompInstaller\\CompInstaller.csproj",
+      "projectUniqueName": "C:\\Users\\Victor\\Git\\CI0001\\CompInstaller\\CompInstaller\\CompInstaller.csproj",
       "projectName": "CompInstaller",
-      "projectPath": "C:\\Users\\Victor\\Git\\VIC0001\\CompInstaller\\CompInstaller\\CompInstaller.csproj",
+      "projectPath": "C:\\Users\\Victor\\Git\\CI0001\\CompInstaller\\CompInstaller\\CompInstaller.csproj",
       "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Victor\\Git\\VIC0001\\CompInstaller\\CompInstaller\\obj\\",
+      "outputPath": "C:\\Users\\Victor\\Git\\CI0001\\CompInstaller\\CompInstaller\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
