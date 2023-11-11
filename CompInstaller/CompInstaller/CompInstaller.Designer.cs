@@ -1,6 +1,6 @@
 ﻿namespace CompInstaller
 {
-    partial class CompInstaller
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,8 +30,8 @@
         {
             tbMain = new TabControl();
             tbParameters = new TabPage();
-            tbInstallers = new TabPage();
             dgvParameters = new DataGridView();
+            tbInstallers = new TabPage();
             tbMain.SuspendLayout();
             tbParameters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvParameters).BeginInit();
@@ -58,16 +58,6 @@
             tbParameters.Text = "Parameters";
             tbParameters.UseVisualStyleBackColor = true;
             // 
-            // tbInstallers
-            // 
-            tbInstallers.Location = new Point(4, 29);
-            tbInstallers.Name = "tbInstallers";
-            tbInstallers.Padding = new Padding(3);
-            tbInstallers.Size = new Size(856, 340);
-            tbInstallers.TabIndex = 1;
-            tbInstallers.Text = "Installers";
-            tbInstallers.UseVisualStyleBackColor = true;
-            // 
             // dgvParameters
             // 
             dgvParameters.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -78,13 +68,23 @@
             dgvParameters.Size = new Size(844, 331);
             dgvParameters.TabIndex = 0;
             // 
-            // CompInstaller
+            // tbInstallers
+            // 
+            tbInstallers.Location = new Point(4, 29);
+            tbInstallers.Name = "tbInstallers";
+            tbInstallers.Padding = new Padding(3);
+            tbInstallers.Size = new Size(856, 340);
+            tbInstallers.TabIndex = 1;
+            tbInstallers.Text = "Installers";
+            tbInstallers.UseVisualStyleBackColor = true;
+            // 
+            // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(888, 503);
             Controls.Add(tbMain);
-            Name = "CompInstaller";
+            Name = "Form1";
             Text = "Form1";
             tbMain.ResumeLayout(false);
             tbParameters.ResumeLayout(false);
