@@ -85,7 +85,10 @@
             ClientSize = new Size(888, 503);
             Controls.Add(tbMain);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Form1_Load;
+            Shown += Form1_Shown;
             tbMain.ResumeLayout(false);
             tbParameters.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvParameters).EndInit();

@@ -27,22 +27,33 @@ namespace CompInstaller
         }
 
 
+        public void ConfigReader(string folderPath)
+        {
+
+        }
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            //MessageBox.Show("On Load");
+
+
 
         }
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            MessageBox.Show("someString");
+            //MessageBox.Show("On Shown");
+
+
         }
 
 
 
-        //private void Form1_Closed(object sender, System.EventArgs e)
-        //{
-        //    //count -= 1;
-        //}
+        private void Form1_Closed(object sender, System.EventArgs e)
+        {
+
+        }
 
 
 
