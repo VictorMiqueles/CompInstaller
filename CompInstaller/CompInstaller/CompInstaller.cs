@@ -1,10 +1,13 @@
+using System;
+
+
 namespace CompInstaller
 {
-    public partial class CompInstaller : Form
+    public partial class Form1 : Form
     {
         private string _currentDirectory = "";
 
-        public CompInstaller()
+        public Form1()
         {
             InitializeComponent();
 
@@ -24,7 +27,33 @@ namespace CompInstaller
         }
 
 
+        public void ConfigReader(string folderPath)
+        {
 
+        }
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //MessageBox.Show("On Load");
+
+
+
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            //MessageBox.Show("On Shown");
+
+
+        }
+
+
+
+        private void Form1_Closed(object sender, System.EventArgs e)
+        {
+
+        }
 
 
 
