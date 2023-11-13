@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2LfwU2Aguo9MEM23ESHjZD5mbGyndfu6mkjM/DByQ5f7bACg2PQkxHZskCl542tluYJmGrfGiLXtbxsIfCAjGA==",
+  "dgSpecHash": "t1+Ae01qLaOpvoLyUtYGl3EgK5d/LqhXG/GlKy8slfgw4h5Xp0Qc10R7ka9+iKThv1KHUhWKWaz3aTr2kRzkCg==",
   "success": true,
   "projectFilePath": "C:\\Users\\victor\\Git\\CI0001\\CompInstaller\\CompInstaller\\CompInstaller.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\victo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

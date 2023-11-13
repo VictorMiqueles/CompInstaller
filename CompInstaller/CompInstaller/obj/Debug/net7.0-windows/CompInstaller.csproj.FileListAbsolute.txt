@@ -30,3 +30,6 @@ C:\Users\victor\Git\CI0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\
 C:\Users\victor\Git\CI0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\CompInstaller.genruntimeconfig.cache
 C:\Users\victor\Git\CI0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\ref\CompInstaller.dll
 C:\Users\victor\Git\CI0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\CompInstaller.Form1.resources
+C:\Users\victor\Git\CI0001\CompInstaller\CompInstaller\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\victor\Git\CI0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\CompInstaller.csproj.AssemblyReference.cache
+C:\Users\victor\Git\CI0001\CompInstaller\CompInstaller\obj\Debug\net7.0-windows\CompInstaller.csproj.CopyComplete
