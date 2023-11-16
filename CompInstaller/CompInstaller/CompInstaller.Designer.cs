@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tbMain = new TabControl();
+            tabControl = new TabControl();
             tbParameters = new TabPage();
             dgvParameters = new DataGridView();
             tbInstallers = new TabPage();
-            tbMain.SuspendLayout();
+            tabControl.SuspendLayout();
             tbParameters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvParameters).BeginInit();
             SuspendLayout();
             // 
-            // tbMain
+            // tabControl
             // 
-            tbMain.Controls.Add(tbParameters);
-            tbMain.Controls.Add(tbInstallers);
-            tbMain.Location = new Point(12, 118);
-            tbMain.Name = "tbMain";
-            tbMain.SelectedIndex = 0;
-            tbMain.Size = new Size(864, 373);
-            tbMain.TabIndex = 0;
+            tabControl.Controls.Add(tbParameters);
+            tabControl.Controls.Add(tbInstallers);
+            tabControl.Location = new Point(12, 118);
+            tabControl.Name = "tabControl";
+            tabControl.SelectedIndex = 0;
+            tabControl.Size = new Size(864, 373);
+            tabControl.TabIndex = 0;
             // 
             // tbParameters
             // 
@@ -83,13 +83,13 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(888, 503);
-            Controls.Add(tbMain);
+            Controls.Add(tabControl);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "CompInstaller";
             Load += Form1_Load;
             Shown += Form1_Shown;
-            tbMain.ResumeLayout(false);
+            tabControl.ResumeLayout(false);
             tbParameters.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvParameters).EndInit();
             ResumeLayout(false);
@@ -97,7 +97,7 @@
 
         #endregion
 
-        private TabControl tbMain;
+        private TabControl tabControl;
         private TabPage tbParameters;
         private TabPage tbInstallers;
         private DataGridView dgvParameters;
