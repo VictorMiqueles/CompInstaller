@@ -1,0 +1,38 @@
+{
+    "ServerComponents" : [
+        {
+            "ServerName" : "Server1",
+            "InstallComponents" : [
+                {
+                    "ComponentName" : "Notepad++"
+                },
+                {
+                    "ComponentName" : "Test01"
+                },
+                {
+                    "ComponentName" : "Test02"
+                }
+            ]
+        }
+    ],
+    "Components" : [
+        {
+            "ComponentName" : "Notepad++",
+            "ScriptPath" : "",
+            "ComponentParameters" : [
+                {
+                    "Parameter" : ""
+                }
+            ]
+        },
+        {
+            "ComponentName" : "TestComponent",
+            "ScriptPath" : "",
+            "ComponentParameters" : [
+                {
+                    "Parameter" : "Test01"
+                }
+            ]
+        }
+    ]
+}
