@@ -13,6 +13,20 @@
                     "ComponentName" : "Test02"
                 }
             ]
+        },
+        {
+            "ServerName" : "Server2",
+            "InstallComponents" : [
+                {
+                    "ComponentName" : "Server2 Notepad++"
+                },
+                {
+                    "ComponentName" : "Server2 Test01"
+                },
+                {
+                    "ComponentName" : "Server2 Test02"
+                }
+            ]
         }
     ],
     "Components" : [

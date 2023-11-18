@@ -2,22 +2,22 @@
     "Parameters" :
         {
             "UserName" : "Admin",
-            "Password" : "*****",
+            "Password" : "Test Password",
             "LogFilePath" :  "%CWD//%PI%//Logs//%ServerDNS_%ComponentName_%ScriptNumber_log.txt"
         },  
 
     "Servers" : [
         {
-            "Name" : "PCS",
+            "Name" : "Server1",
             "ServerParameters" : [
                 {
-                    "DNS" : "Host.Computer1",
-                    "IPAddress" : "123456"
+                    "DNS" : "LAPTOP-I6EESSLU",
+                    "IPAddress" : "192.168.0.174"
                 }
             ]
         },
         {
-            "Name" : "FTP",
+            "Name" : "Server2",
             "ServerParameters" : [
                 {
                     "DNS" : "Host.Computer2",
