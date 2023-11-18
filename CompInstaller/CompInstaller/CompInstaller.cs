@@ -43,27 +43,7 @@ namespace CompInstaller
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //ConfigReader configReader = new ConfigReader();
-
-            //if (File.Exists(_currentDirectory + "//Environment.json"))
-            //{
-            //    _environmentJson = configReader.ReadConfig(_currentDirectory + "//Environment.json");
-            //}
-            //else
-            //{
-            //    //throw new FileNotFoundException("There is no Environment.Json file");
-            //    MessageBox.Show("There is no Environment.Json file");
-            //    return;
-            //}
-
-            ////_compsJson = configReader.ReadConfig(_currentDirectory + "//Comps*.json");
-
-
-            //// configReader(_currentPIFolder) *This isn't part of Load!! use this when creating server tabs*
-            //var testText = _environmentJson.Parameters.UserName.ToString();
-
-            //SetupParametersTab();
-            //PopulateParametersTab();
+            
         }
 
         private void SetupParametersTab()
