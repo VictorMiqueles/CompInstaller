@@ -32,6 +32,7 @@
             tbParameters = new TabPage();
             dgvParameters = new DataGridView();
             tbInstallers = new TabPage();
+            btnLoadComps = new Button();
             tabControl.SuspendLayout();
             tbParameters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvParameters).BeginInit();
@@ -78,11 +79,23 @@
             tbInstallers.Text = "Installers";
             tbInstallers.UseVisualStyleBackColor = true;
             // 
+            // btnLoadComps
+            // 
+            btnLoadComps.Location = new Point(20, 15);
+            btnLoadComps.Name = "btnLoadComps";
+            btnLoadComps.Size = new Size(100, 29);
+            btnLoadComps.TabIndex = 1;
+            btnLoadComps.Text = "Load Comps";
+            btnLoadComps.TextAlign = ContentAlignment.MiddleLeft;
+            btnLoadComps.UseVisualStyleBackColor = true;
+            btnLoadComps.Click += btnLoadComps_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(888, 503);
+            Controls.Add(btnLoadComps);
             Controls.Add(tabControl);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
@@ -101,5 +114,6 @@
         private TabPage tbParameters;
         private TabPage tbInstallers;
         private DataGridView dgvParameters;
+        private Button btnLoadComps;
     }
 }

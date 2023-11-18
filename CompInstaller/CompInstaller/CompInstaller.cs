@@ -1,5 +1,7 @@
+using CompInstaller.InstallerTasks;
 using System;
 using System.Data.Common;
+using System.IO;
 using System.Windows.Forms;
 
 
@@ -8,7 +10,8 @@ namespace CompInstaller
     public partial class Form1 : Form
     {
         private string _currentDirectory = "";
-        dynamic _environmentJson = "";
+        dynamic environmentJson = "";
+        dynamic compsJson = "";
 
         public Form1 compInstaller = null;
 
@@ -40,20 +43,9 @@ namespace CompInstaller
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ConfigReader configReader = new ConfigReader();
-            _environmentJson = configReader.ReadConfig(_currentDirectory + "//Environment.json");
-
-            // configReader(_currentPIFolder) *This isn't part of Load!! use this when creating server tabs*
-            var testText = _environmentJson.Parameters.UserName.ToString();
-
-
-            // ParameterTab instantiation here? ParameterTab method with environment.Json overload?
-
-
-            SetupParametersTab();
-            PopulateParametersTab();
-
+            
         }
+
         private void SetupParametersTab()
         {
             dgvParameters.Name = "Parameters Tab";
@@ -77,13 +69,18 @@ namespace CompInstaller
             dgvParameters.Columns[1].Width = 550;
             dgvParameters.Columns["More"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
+            dgvParameters.AllowUserToAddRows = false;
+
+            dgvParameters.Columns["Name"].ReadOnly = true;
+            dgvParameters.Columns["Value"].ReadOnly = true;
+
             dgvParameters.Dock = DockStyle.Fill;
         }
 
         private void PopulateParametersTab()
         {
 
-            foreach (var parameter in _environmentJson.Parameters)
+            foreach (var parameter in environmentJson.Parameters)
             {
                 string[] row = { parameter.Name, parameter.Value, "" };
                 dgvParameters.Rows.Add(row);
@@ -92,7 +89,49 @@ namespace CompInstaller
 
         private void Form1_Shown(object sender, EventArgs e)
         {
+            ConfigReader configReader = new ConfigReader();
 
+            if (File.Exists(_currentDirectory + "//Environment.json"))
+            {
+                environmentJson = configReader.ReadConfig(_currentDirectory + "//Environment.json");
+            }
+            else
+            {
+                MessageBox.Show("There is no Environment Json file to load");
+                return;
+            }
+
+            string[] compFiles = Directory.GetFiles(_currentDirectory, "Comps*.*"); // not lazy
+            if (compFiles.Length == 1)
+            {
+                foreach (var file in compFiles)
+                {
+                    compsJson = configReader.ReadConfig(file);
+                }
+            }
+            else if (compFiles.Length > 1)
+            {
+                MessageBox.Show("There is more than one Comps.json file.  Please make sure there is only one in the folder");
+                btnLoadComps.Enabled = false;
+                return;
+            }
+            else
+            {
+                MessageBox.Show("There is no Comps Json file to load");
+                btnLoadComps.Enabled = false;
+                return;
+            }
+          
+            SetupParametersTab();
+            PopulateParametersTab();
+        }
+
+        private void btnLoadComps_Click(object sender, EventArgs e)
+        {
+            // Instantiate CompsPage here
+            ComponentInstallPage componentInstallPage = new ComponentInstallPage(compInstaller);
+            componentInstallPage.ComponentInstallPageTab(tabControl, compsJson);
+            tabControl.SelectTab(2); // by index 
         }
 
 
@@ -102,7 +141,6 @@ namespace CompInstaller
 
         }
 
-
-
+        
     }
 }
