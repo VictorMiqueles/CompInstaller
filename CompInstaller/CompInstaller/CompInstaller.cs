@@ -3,6 +3,7 @@ using System;
 using System.Data.Common;
 using System.IO;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace CompInstaller
@@ -14,7 +15,6 @@ namespace CompInstaller
         dynamic compsJson = "";
 
         public Form1 compInstaller = null;
-
 
         public Form1()
         {
@@ -36,14 +36,9 @@ namespace CompInstaller
 
             compInstaller = this;
         }
-
-
-
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void SetupParametersTab()
@@ -90,6 +85,7 @@ namespace CompInstaller
         private void Form1_Shown(object sender, EventArgs e)
         {
             ConfigReader configReader = new ConfigReader();
+            btnInstallTab.Enabled = false;
 
             if (File.Exists(_currentDirectory + "//Environment.json"))
             {
@@ -121,7 +117,7 @@ namespace CompInstaller
                 btnLoadComps.Enabled = false;
                 return;
             }
-          
+
             SetupParametersTab();
             PopulateParametersTab();
         }
@@ -131,16 +127,63 @@ namespace CompInstaller
             // Instantiate CompsPage here
             ComponentInstallPage componentInstallPage = new ComponentInstallPage(compInstaller);
             componentInstallPage.ComponentInstallPageTab(tabControl, compsJson);
-            tabControl.SelectTab(2); // by index 
+            tabControl.SelectTab(2);
+
+            btnInstallTab.Enabled = true;
         }
 
+        private async void btnInstallTab_Click(object sender, EventArgs e)
+        {
+            //compInstaller.tabControl.TabPages
+            foreach (TabPage tabPage in tabControl.TabPages)
+            {
+                if (tabControl.SelectedTab == tabPage)
+                {
+                    if (tabPage.Name != "tbParameters" && tabPage.Name != "tbInstallers")
+                    {
+                        foreach (Control control in tabPage.Controls)
+                        {
+                            if (control is DataGridView dataGridView)
+                            {
+                                // Set all Status rows to 'Awaiting'
 
+                                foreach (DataGridViewRow row in dataGridView.Rows)
+                                {
+                                    var componentName = row.Cells[1].Value.ToString();
+
+                                    var task = Task.Run(() =>
+                                    {
+                                        row.Cells[0].Value = "Installing";
+
+                                        foreach (var component in compsJson.Components)
+                                        {
+                                            if (string.Equals(componentName, component.ComponentName.ToString(), StringComparison.OrdinalIgnoreCase))
+                                            {
+                                                var componentInstallTask = new ComponentInstallTask(new PSCommand(compsJson, componentName), compInstaller);
+
+                                                componentInstallTask.InstallComponent();
+
+                                                System.Threading.Thread.Sleep(2000);
+                                            }
+
+                                            row.Cells[0].Value = "Done";
+                                        }
+                                    });
+
+                                    await task;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            MessageBox.Show(tabControl.SelectedTab.Text + " tab has been installed!");
+        }
 
         private void Form1_Closed(object sender, System.EventArgs e)
         {
 
         }
-
-        
     }
 }

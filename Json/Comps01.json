@@ -7,10 +7,10 @@
                     "ComponentName" : "Notepad++"
                 },
                 {
-                    "ComponentName" : "Test01"
+                    "ComponentName" : "Filezilla"
                 },
                 {
-                    "ComponentName" : "Test02"
+                    "ComponentName" : "Chrome"
                 }
             ]
         },
@@ -32,7 +32,7 @@
     "Components" : [
         {
             "ComponentName" : "Notepad++",
-            "ScriptPath" : "",
+            "ScriptPath" : "C:\\CompInstaller\\Comps01\\Server1\\NotePad++.ps1",
             "ComponentParameters" : [
                 {
                     "Parameter" : ""
@@ -40,11 +40,20 @@
             ]
         },
         {
-            "ComponentName" : "TestComponent",
-            "ScriptPath" : "",
+            "ComponentName" : "Filezilla",
+            "ScriptPath" : "C:\\CompInstaller\\Comps01\\Server1\\Filezilla.ps1",
             "ComponentParameters" : [
                 {
-                    "Parameter" : "Test01"
+                    "Parameter" : ""
+                }
+            ]
+        },
+        {
+            "ComponentName" : "Chrome",
+            "ScriptPath" : "C:\\CompInstaller\\Comps01\\Server1\\Chrome.ps1",
+            "ComponentParameters" : [
+                {
+                    "Parameter" : ""
                 }
             ]
         }
