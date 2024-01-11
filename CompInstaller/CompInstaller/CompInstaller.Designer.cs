@@ -33,6 +33,7 @@
             dgvParameters = new DataGridView();
             tbInstallers = new TabPage();
             btnLoadComps = new Button();
+            btnInstallTab = new Button();
             tabControl.SuspendLayout();
             tbParameters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvParameters).BeginInit();
@@ -83,18 +84,29 @@
             // 
             btnLoadComps.Location = new Point(20, 15);
             btnLoadComps.Name = "btnLoadComps";
-            btnLoadComps.Size = new Size(100, 29);
+            btnLoadComps.Size = new Size(100, 30);
             btnLoadComps.TabIndex = 1;
             btnLoadComps.Text = "Load Comps";
             btnLoadComps.TextAlign = ContentAlignment.MiddleLeft;
             btnLoadComps.UseVisualStyleBackColor = true;
             btnLoadComps.Click += btnLoadComps_Click;
             // 
+            // btnInstallTab
+            // 
+            btnInstallTab.Location = new Point(350, 15);
+            btnInstallTab.Name = "btnInstallTab";
+            btnInstallTab.Size = new Size(200, 60);
+            btnInstallTab.TabIndex = 2;
+            btnInstallTab.Text = "Install Selected Tab";
+            btnInstallTab.UseVisualStyleBackColor = true;
+            btnInstallTab.Click += btnInstallTab_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(888, 503);
+            Controls.Add(btnInstallTab);
             Controls.Add(btnLoadComps);
             Controls.Add(tabControl);
             Name = "Form1";
@@ -115,5 +127,6 @@
         private TabPage tbInstallers;
         private DataGridView dgvParameters;
         private Button btnLoadComps;
+        private Button btnInstallTab;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CompInstaller.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata;
@@ -12,10 +13,12 @@ namespace CompInstaller.InstallerTasks
     public class ComponentInstallPage
     {
         Form1 compInstaller = null;
+        private readonly IInstallerTasks _installerTasks;
 
         public ComponentInstallPage(Form1 form) 
         {
             compInstaller = form;
+            //_installerTasks = installerTasks;
 
         }
 

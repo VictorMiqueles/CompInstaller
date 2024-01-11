@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CompInstallerTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47dcfb3f7953891d5852d8179df19d162fb15b7d")]
 [assembly: System.Reflection.AssemblyProductAttribute("CompInstallerTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CompInstallerTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
