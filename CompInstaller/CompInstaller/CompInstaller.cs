@@ -127,7 +127,7 @@ namespace CompInstaller
             // Instantiate CompsPage here
             ComponentInstallPage componentInstallPage = new ComponentInstallPage(compInstaller);
             componentInstallPage.ComponentInstallPageTab(tabControl, compsJson);
-            tabControl.SelectTab(2); // by index 
+            tabControl.SelectTab(2);
 
             btnInstallTab.Enabled = true;
         }
